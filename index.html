@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Agent Name Generator</title>
+	<meta name="description" content="Generate your secret agent name" />
+	
+	
+	
+	<!-- The Generator script. You can move the script to an external file for better overview -->
+	<script type="text/javascript">	
+	/*  Online Name Generators v.1.0 script is  made by Niels Gamborg webmaster at online-generator.com.  
+	*    The script is  free (as in "free speech" and also as in "free beer") in anyway. Use it after you own likings.
+	*    Peace and love. :)
+	*/	
+		function generator(){
+			// Add your own words to the wordlist. Be carefull to obey the showed syntax
+			
+			var wordlist1 = ["Cool","Masked","Bloody","Lame","Big","Stupid","Drunk","Rotten",
+							"Blue","Black","White","Red","Purple","Golden","Silver","Orange","Maroon","Teal","Taupe","Indigo","Violet","Magnolia","Gold","Burgundy","Rusty","Crimson","Amber","Rose","Fuschia","Blonde","Olive","Lavander","Excited","Afraid","Envious","Ecstatic","Euphoric","Grateful","Guilty","Happy","Hated","Indifferent","Horrified","Hostile","Jealous","Joyful","Lonely","Lusty","Outraged","Panicked","Passionate","Pitiful","Raging","Regretful","Relieved","Remorseful","Sad","Satisfied","Confident","Shameful","Shocked","Shy","Sorrowful","Suffering","Surprised","Trusted","Wonderful","Worried","Zealous","Zesty"];
+			
+			var wordlist2 = ["Hamster","Moose","Lama","Duck","Bear","Eagle","Tiger",
+							"Rocket","Bullet","Knee","Foot","Hand","Ostrich","Kangaroo","Sloth","Leopard","Lion","Bat","Buffalo","Rabbit","Gerbil","Chinchilla","Pizza","Aubergine","Carrot","Lettuce","Brocolli","Cauliflower","Runner Bean","Sprout","Omlette","Crumpet","Muffin","Scone","Sponge","Cake","Pigeon","Wallaby","Monkey","Chimpanze","Cat","Dog","Racoon","Ardvark","Anteater"]
+			
+			// Random numbers are made 
+			var randomNumber1 = parseInt(Math.random() * wordlist1.length);
+			var randomNumber2 = parseInt(Math.random() * wordlist2.length);
+			var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2];			
+			
+			//alert(name); //Remove first to slashes to alert the name
+			
+			//If there's already a name it is removed  
+			if(document.getElementById("result")){
+				document.getElementById("placeholder").removeChild(document.getElementById("result"));
+			}
+			// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
+			var element = document.createElement("div");
+			element.setAttribute("id", "result");
+			element.appendChild(document.createTextNode(name));
+			document.getElementById("placeholder").appendChild(element);
+		}		
+	</script>
+	
+	
+	
+	<!-- Stylesheet. Change styles here. You can move the stylesheet to a extern file for better overview -->
+	<style type="text/css">
+		body{font-family: arial, serif;}
+		#wrapper{border-left:1px solid #cccccc;border-right:1px solid #cccccc;margin:0 auto;padding: 0 20px;width: 700px}
+		#generator{background:#e9f3f6;border:1px solid #cccccc;margin:30px 0;font-size:28px;font-weight:bold;padding:50px 0 20px;text-align:center;-moz-border-radius: 5px;-webkit-border-radius: 5px;}
+		#generator input{font-size:16px;font-weight:normal;margin-top: 30px}
+		#footer{font-size: 10px; color: #999; margin: 30px 0 0 0;}
+		#footer a{color:#999}
+	</style>
+	
+	
+</head>
+<body onload="generator()">
+	<div id="wrapper">
+		
+		<!-- Change the text to your needs -->
+		<h1>Generate your super secret Agent name below</h1>
+		<p>Type your email in the box below and click "Generate" to find out what your code name is from the big wigs at HQ.
+		</p>
+		<p>Good luck Agents, don't let us down</p>
+		
+		<!-- The generator result and button. Change text on the button by changing button value. Be carefull changing ID's in this part -->
+		<div id="generator" >
+			<div id="placeholder"></div>
+			<input type="button" value="Make name" onclick="generator()" />		
+		</div>
+		
+		<!--  Change the text to your needs -->
+		<p>By entering your email, you will be added onto our mailing list and we may contact from time to time with updates about Can You Escape, we will never share this information with any third parties.
+		
+		<!-- The footer. Place any contact info ect here.-->
+		<div id="footer">
+		<p>This generator is developed with help from the <a href="http://online-generator.com">online name generators</a>.
+		</p>
+		</div>
+	</div>
+</body>
+</html>
