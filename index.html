@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Agent Name Generator</title>
+	<meta name="description" content="Generate your secret agent name" />
+	
+	
+	
+	<!-- The Generator script. You can move the script to an external file for better overview -->
+	<script type="text/javascript">	
+	/*  Online Name Generators v.1.0 script is  made by Niels Gamborg webmaster at online-generator.com.  
+	*    The script is  free (as in "free speech" and also as in "free beer") in anyway. Use it after you own likings.
+	*    Peace and love. :)
+	*/	
+		function generator(){
+			// Add your own words to the wordlist. Be carefull to obey the showed syntax
+			
+			var wordlist1 = ["Cool","Masked","Bloody","Lame","Big","Stupid","Drunk","Rotten",
+							"Blue","Black","White","Red","Purple","Golden","Silver","Orange","Maroon","Teal","Taupe","Indigo","Violet","Magnolia","Gold","Burgundy","Rusty","Crimson","Amber","Rose","Fuschia","Blonde","Olive","Lavander","Excited","Afraid","Envious","Ecstatic","Euphoric","Grateful","Guilty","Happy","Hated","Indifferent","Horrified","Hostile","Jealous","Joyful","Lonely","Lusty","Outraged","Panicked","Passionate","Pitiful","Raging","Regretful","Relieved","Remorseful","Sad","Satisfied","Confident","Shameful","Shocked","Shy","Sorrowful","Suffering","Surprised","Trusted","Wonderful","Worried","Zealous","Zesty"];
+			
+			var wordlist2 = ["Hamster","Moose","Lama","Duck","Bear","Eagle","Tiger",
+							"Rocket","Bullet","Knee","Foot","Hand","Ostrich","Kangaroo","Sloth","Leopard","Lion","Bat","Buffalo","Rabbit","Gerbil","Chinchilla","Pizza","Aubergine","Carrot","Lettuce","Brocolli","Cauliflower","Runner Bean","Sprout","Omlette","Crumpet","Muffin","Scone","Sponge","Cake","Pigeon","Wallaby","Monkey","Chimpanze","Cat","Dog","Racoon","Ardvark","Anteater"]
+			
+			// Random numbers are made 
+			var randomNumber1 = parseInt(Math.random() * wordlist1.length);
+			var randomNumber2 = parseInt(Math.random() * wordlist2.length);
+			var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2];			
+			
+			//alert(name); //Remove first to slashes to alert the name
+			
+			//If there's already a name it is removed  
+			if(document.getElementById("result")){
+				document.getElementById("placeholder").removeChild(document.getElementById("result"));
+			}
+			// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
+			var element = document.createElement("div");
+			element.setAttribute("id", "result");
+			element.appendChild(document.createTextNode(name));
+			document.getElementById("placeholder").appendChild(element);
+		}		
+	</script>
+	
+	
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+	
+</head>
+
+<div class="container-fluid">
+<body onload="generator()">
+	<div id="wrapper">
+		
+		<!-- Change the text to your needs -->
+		<h1>Generate your super secret Agent name below</h1>
+		<p>Type your email in the box below and click "Generate" to find out what your code name is from the big wigs at HQ.
+		</p>
+		<p>Good luck Agents, don't let us down</p>
+
+
+	<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+			<button type="button" class="btn btn-lg btn-success" onclick="generator()">Get Your Agent Name</button>	
+		</div>
+<div class="container.fluid">
+<div class="row">
+  <div class="col-md-6">
+<div class="alert alert-success" role="alert">
+<div id="generator" >
+			<div id="placeholder"></div>
+</div>
+</div>
+</div>
+</div>
+		
+		
+		
+		<!--  Change the text to your needs -->
+		
+		
+		<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<p>By entering your email, you will be added onto our mailing list and we may contact from time to time with updates about Can You Escape, we will never share this information with any third parties.</p>
+		</div>
+		</div>
+	</div>
+
+		<!-- The footer. Place any contact info ect here.-->
+		<div id="footer">
+		<p>This generator is developed with help from the <a href="http://online-generator.com">online name generators</a>.
+		</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
