@@ -24,3 +24,8 @@ p {
 body {
     background-color: #000000;
 }
+
+img {
+    border:none; 
+    outline: none;
+}
